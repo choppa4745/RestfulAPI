@@ -1,22 +1,25 @@
-package com.example.rest.web.request;
+package com.example.rest.web.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.Instant;
 import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpsertUserRequest {
+public class CommentResponse {
 
     private UUID id;
 
+    private String comment;
+
     private String username;
 
-    private String email;
+    private Instant createdAt;
 
-    private String password;
+    private Instant updatedAt;
 
 }

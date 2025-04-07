@@ -1,4 +1,4 @@
-package com.example.rest.web.request;
+package com.example.rest.web.model.request;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;

@@ -7,13 +7,17 @@ import com.example.rest.repository.CommentsRepository;
 import com.example.rest.service.CommentService;
 import com.example.rest.service.NewsService;
 import com.example.rest.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Objects;
 import java.util.UUID;
 
+@Service
+@Slf4j
 public class CommentServiceImpl extends AbstractUnitedModelServiceImpl<Comment, UUID, CommentsRepository> implements CommentService {
     private final UserService userService;
 

@@ -2,14 +2,17 @@ package com.example.rest.service.impl_services;
 
 import com.example.rest.model.Category;
 import com.example.rest.repository.CategoryRepository;
-import com.example.rest.service.CategoryService;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.text.MessageFormat;
 import java.util.Objects;
 import java.util.UUID;
 
-public class CategoryServiceImpl extends AbstractUnitedModelServiceImpl<Category, UUID, CategoryRepository> implements CategoryService {
+@Service
+@Slf4j
+public class CategoryServiceImpl extends AbstractUnitedModelServiceImpl<Category, UUID, CategoryRepository> implements com.example.rest.service.CategoryServiceImpl {
 
     public CategoryServiceImpl(CategoryRepository repository) {
         super(repository);

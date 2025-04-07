@@ -5,12 +5,16 @@ import com.example.rest.exceptions.ModelNotFoundException;
 import com.example.rest.model.User;
 import com.example.rest.repository.UserRepository;
 import com.example.rest.service.UserService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.text.MessageFormat;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
+@Service
+@Slf4j
 public class UserServiceImpl extends AbstractUnitedModelServiceImpl<User, UUID, UserRepository> implements UserService {
 
 

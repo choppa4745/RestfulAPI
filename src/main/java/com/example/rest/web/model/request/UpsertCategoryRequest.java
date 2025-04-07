@@ -1,4 +1,4 @@
-package com.example.rest.web.request;
+package com.example.rest.web.model.request;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -11,12 +11,12 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpsertCommentRequest {
+public class UpsertCategoryRequest {
 
     private UUID id;
 
     @NotNull
-    @Size(min = 1, max = 255, message = "Min comment size is: {min}. Max comment size is: {max}")
-    private String comment;
+    @Size(min = 3, max = 20, message = "Min size for category: {min}. Max size is: {max}")
+    private String name;
 
 }

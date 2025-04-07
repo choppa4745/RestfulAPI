@@ -1,16 +1,18 @@
-package com.example.rest.web.response;
+package com.example.rest.web.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class BriefNewsResponse {
+@NoArgsConstructor
+public class NewsResponse {
 
     private UUID id;
 
@@ -26,6 +28,6 @@ public class BriefNewsResponse {
 
     private Instant updatedAt;
 
-    private Integer commentsCount;
+    private List<CommentResponse> comments = new ArrayList<>();
 
 }

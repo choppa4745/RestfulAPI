@@ -1,4 +1,4 @@
-package com.example.rest.web.response;
+package com.example.rest.web.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

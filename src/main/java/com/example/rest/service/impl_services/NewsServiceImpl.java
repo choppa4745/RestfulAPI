@@ -4,23 +4,27 @@ import com.example.rest.model.Category;
 import com.example.rest.model.News;
 import com.example.rest.model.User;
 import com.example.rest.repository.NewsRepository;
-import com.example.rest.service.CategoryService;
+import com.example.rest.service.CategoryServiceImpl;
 import com.example.rest.service.NewsService;
 import com.example.rest.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.Objects;
 import java.util.UUID;
 
+@Service
+@Slf4j
 public class NewsServiceImpl extends AbstractUnitedModelServiceImpl<News, UUID, NewsRepository> implements NewsService {
     private final UserService userService;
 
-    private final CategoryService categoryService;
+    private final CategoryServiceImpl categoryService;
 
-    public NewsServiceImpl(NewsRepository repository, UserService userService, CategoryService categoryService) {
+    public NewsServiceImpl(NewsRepository repository, UserService userService, CategoryServiceImpl categoryService) {
         super(repository);
         this.userService = userService;
         this.categoryService = categoryService;

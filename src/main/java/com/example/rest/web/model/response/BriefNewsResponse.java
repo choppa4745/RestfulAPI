@@ -1,4 +1,4 @@
-package com.example.rest.web.response;
+package com.example.rest.web.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,16 +10,22 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CommentResponse {
+public class BriefNewsResponse {
 
     private UUID id;
 
-    private String comment;
+    private String title;
+
+    private String description;
+
+    private String body;
 
     private String username;
 
     private Instant createdAt;
 
     private Instant updatedAt;
+
+    private Integer commentsCount;
 
 }

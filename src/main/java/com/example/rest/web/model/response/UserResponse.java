@@ -1,4 +1,4 @@
-package com.example.rest.web.request;
+package com.example.rest.web.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,14 +9,12 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpsertNewsRequest {
+public class UserResponse {
 
     private UUID id;
 
-    private String title;
+    private String username;
 
-    private String description;
-
-    private String body;
+    private String email;
 
 }
